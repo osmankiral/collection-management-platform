@@ -1,0 +1,9 @@
+services:
+  nextjs:
+    build: .
+    container_name: nextjs-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXTAUTH_SECRET=L8f9rN6qVz5JXwBhPk3YtZsRwDgU0aCm
