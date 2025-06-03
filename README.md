@@ -5,6 +5,7 @@ Projeyi klonladığınızda .env.local dosyası .gitignore kapsamında olduğund
 Proje kök dizinine bir .env.local dosyası oluşturup aşağıdaki içeriği yapıştırın:
 
 NEXT_PUBLIC_API_BASE_URL=https://maestro-api-dev.secil.biz/
+
 NEXTAUTH_SECRET=L8f9rN6qVz5JXwBhPk3YtZsRwDgU0aCm
 
 Bu dosya sayesinde Next.js uygulaması gerekli environment değişkenlerine erişebilir ve sorunsuz çalışır.
