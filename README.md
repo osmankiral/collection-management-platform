@@ -13,7 +13,16 @@ Bu dosya sayesinde Next.js uygulaması gerekli environment değişkenlerine eri�
 ✅ Çözüm 2 – docker-compose.yml Dosyasını Güncellemek
 Eğer projeyi Docker ile ayağa kaldırıyorsanız, docker-compose.yml dosyasındaki ilgili servise aşağıdaki environment değişkenlerini ekleyin:
 
-<pre lang="yaml"> ```yaml services: nextjs: build: . container_name: nextjsgit-app ports: - "3000:3000" environment: - NODE_ENV=production - NEXTAUTH_SECRET=L8f9rN6qVz5JXwBhPk3YtZsRwDgU0aCm - NEXT_PUBLIC_API_BASE_URL=https://maestro-api-dev.secil.biz/ ``` </pre>
+<pre lang="yaml"> ```services:
+  nextjs:
+    build: .
+    container_name: nextjsgit-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXTAUTH_SECRET=L8f9rN6qVz5JXwBhPk3YtZsRwDgU0aCm
+      - NEXT_PUBLIC_API_BASE_URL=https://maestro-api-dev.secil.biz/``` </pre>
       
 Bu yöntem sayesinde .env.local dosyasına ihtiyaç olmadan, environment değişkenleri doğrudan Docker container’ına aktarılır.
 
